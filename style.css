@@ -13,13 +13,29 @@ body {
 
 }
 
+@media(max-width:400px) {
+    header {
+        height: 30vh;
+    }
+}
+
 header {
     height:100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
     background-color: #FFEB3B;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.menu a {
+   display: block;
+   padding: 10px;
 }
 
 .menu ul {
@@ -51,6 +67,18 @@ a:hover {
     font-style: italic;
 }
 
-img {
+.site-title {
+    font-size: 4em;
+}
+
+
+.img-portfolio {
     width: 40%;
+}
+
+figcaption {
+    background-color:#FFF9C4;
+    width: 150px;
+    height: 20px;
+    align-items: center;
 }
