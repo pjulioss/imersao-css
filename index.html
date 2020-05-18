@@ -5,42 +5,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Imersão CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Animal Fest</title>
 </head>
 
 <body>
     <header>
         <nav class="menu">
-            <ul>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Portfólio</a></li>
+            <ul class="container">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+
             </ul>
         </nav>
-        <div>
-            <h1 class="site-title">Pedro Júlio</h1>
-            <h2 class="site-subtitle">Junior { Front-End: Developer; }</h2>
+        <div class='titulos container'>
+            <h1 class="site-title"> Animal Fest</h1>
+            <h2 class="site-subtitle">Seu melhor amigo merece uma grande festa</h2>
+            <h2><i class="fas fa-angle-down"></i></h2>
         </div>
     </header>
-    <section>
-        <h2>Portfólio</h2>
-        <figure>
-            <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-            <figcaption>eCommerce</figcaption>
+
+    <section class="sobre container" id="sobre">
+        <h2>Conheça a Animal Fest</h2>
+        <figure class="avatar">
+            <img src="img/petshop-campo-belo-01.jpg" height="">
         </figure>
-        <figure>
-            <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-            <figcaption>Mobile</figcaption>
-        </figure>
-        <figure>
-            <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-            <figcaption>Web design</figcaption>
-        </figure>
-        <figure>
-            <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg"
-                alt="Projetos pessoais">
-            <figcaption>Projetos pessoais</figcaption>
-        </figure>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a repellat nisi aperiam laudantium,
+            excepturi harum doloribus doloremque corporis labore
+            unde facere dolorem fugit delectus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae laudantium dignissimos corrupti dolores
+            impedit repellat necessitatibus non, aliquam, ab at
+            officiis adipisci.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem sed repellat impedit. Accusantium
+            aspernatur dolore, corrupti ipsa delectus quam est sapiente, placeat ullam dignissimos earum omnis cum quis,
+            fugiat rem.</p>
+        <p>Site criado durante a semana de <a href="https://alura.com.br/imersao-css">Imersão CSS da Alura</a></p>
+    </section>
+
+    <section class="portfolio container" id="servicos">
+        <h2>Casamentos</h2>
+        <div class="grid">
+            <figure>
+                <img class="img-portfolio" src="./img/cute_dog2-big.jpg" alt="Casamentos">
+            </figure>
+            <figure>
+                <img class="img-portfolio" src="./img/cute_dog1-big.jpg" alt="Casamentos">
+            </figure>
+            <figure>
+                <img class="img-portfolio" src="./img/cute_dog3-big.jpg" alt="Casamentos">
+            </figure>
+        </div>
+        <h2>Anivesários</h2>
+        <div class="grid">
+            <figure>
+                <img class="img-portfolio" src="./img/rodolfo-barreto-NSOAe6l-6nM-unsplash.jpg" alt="Anivesários">
+            </figure>
+            <figure>
+                <img class="img-portfolio" src="./img/glenn-han-sowOK2LiUz8-unsplash.jpg" alt="Anivesários">
+            </figure>
+            <figure>
+                <img class="img-portfolio" src="./img/delaney-dawson-BXs8SjVelKs-unsplash.jpg" alt="Anivesários">
+            </figure>
+
+        </div>
+    </section>
+    <section class="contato container" id="contato">
+        <h2>Contato</h2>
+        <form class="msg">
+            <label for="nome">Nome completo</label>
+            <input type="text" name="nome">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+            <label for="msg">Mensagem</label>
+            <textarea name="msg" id="" cols="100" rows="10"></textarea>
+            <input type="button" value="Enviar">
+
+        </form>
+        <div class="grid icons">
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="far fa-envelope"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
     </section>
 
 

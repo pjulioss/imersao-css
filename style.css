@@ -1,17 +1,19 @@
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color: #FCFCFC;
     background-size: auto 100vh;
-    font-family: Arial;
-    color: #212121;
-    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #04080F;
+    /* height: 100vh; */
 
 }
+
+
 
 @media(max-width:400px) {
     header {
@@ -20,22 +22,37 @@ body {
 }
 
 header {
-    height:100vh;
+    align-items: center;
+    background-image: url(./img/s-o-c-i-a-l-c-u-t-CZ8XutyXLr8-unsplash.jpg);
+    background-size: cover;
+    height: 50vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+
+}
+
+header div {
+    text-shadow: #FCFCFC 2px 2px 5px;
+}
+
+header h2:nth-child(3) {
+    font-size: 3em;
+    text-align: center;
+
 }
 
 .menu {
-    background-color: #FFEB3B;
+    background-color: #02A9EA;
     position: fixed;
-    width: 100vw;
     top: 0;
+    width: 100vw;
+    /* propriedade com valor maior assim não sofre alteração das demais */
+    z-index: 1;
 }
 
 .menu a {
-   display: block;
-   padding: 10px;
+    display: block;
+    padding: 10px;
 }
 
 .menu ul {
@@ -47,15 +64,17 @@ header {
     list-style: none;
 }
 
-a {
+.menu a {
     text-decoration: none;
-    color: #212121;
+    color: #04080F;
     text-transform: uppercase;
+    transition: background-color .7s;
 
 }
 
-a:hover {
-    color:#757575;
+.menu a:hover {
+    /* color:#FCFCFC; */
+    background-color: #FAFF00;
 }
 
 .site-title,
@@ -71,14 +90,163 @@ a:hover {
     font-size: 4em;
 }
 
+.titulos {
+    transform: scale(0.5) translateY(50vh);
+    opacity: .2;
+
+    /* vamos crar uma animação e chamala em 2s */
+    animation: linear 2s animaTitulo forwards;
+}
+
+/* nossa animação personalizada */
+@keyframes animaTitulo {
+
+    /* termino da animação */
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
 
 .img-portfolio {
-    width: 40%;
+    width: 100%;
 }
 
-figcaption {
-    background-color:#FFF9C4;
-    width: 150px;
-    height: 20px;
-    align-items: center;
+
+.sobre p {
+    text-indent: 1.4em;
+    margin-bottom: 1em;
 }
+
+.container {
+    padding-left: 2em;
+    padding-right: 2em;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+
+    .container {
+        padding-left: 2em;
+        padding-right: 2em;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img-portfolio:hover {
+        transform: scale(1.2) rotate(-2deg);
+        transition: transform .7s;
+    
+    }
+    
+
+}
+
+.sobre h2,
+.portfolio h2,
+.contato h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: #FCFCFC;
+    text-shadow: #04080F 1px 1px 5px;
+}
+
+.sobre a {
+    text-decoration: none;
+    color:#02A9EA;
+}
+.sobre a:hover {
+    background-color:#FAFF00;
+
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 2em;
+    justify-content: center;
+}
+
+@media (min-width:600px) {
+
+    header {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .portfolio .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+
+section h2 {
+    background-color: #02A9EA;
+
+}
+
+
+.contato a {
+    color: #04080F;
+    font-size: 3em;
+    text-decoration: none;
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a:hover {
+    text-shadow: #FAFF00 1px 1px 5px;
+}
+
+.contato h2 {
+    text-align: center;
+}
+
+form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.msg input {
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+input[type="button"] {
+    background-color: #02A9EA;
+    cursor: pointer;
+    width: 30%;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all .7s;
+}
+
+input[type='button']:hover {
+    background-color: #FAFF00;
+}
+
+.sobre .avatar {
+    float: right;
+    margin-left: 2em;
+}
+
+.avatar img {
+height: 320px;
+}
+
